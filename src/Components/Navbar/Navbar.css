@@ -110,8 +110,11 @@ nav{
 }
 .sublinks li .NavLinks:hover{
     color: var(--c3);
-    background-color: var(--c2);
+    background-color: var(--c1);
 
+}
+.sublinks li:hover{
+    background-color: var(--c1);
 }
 
 .detail-summary{
