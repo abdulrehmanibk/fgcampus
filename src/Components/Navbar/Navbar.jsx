@@ -49,7 +49,7 @@ const Navbar = () => {
             </ul>
         </div>
         <div className="btn_nav">
-        <button className='button2'><NavLink to={'/'} className={"NavLinks"}>Get A Free Trial</NavLink>  </button>
+        <NavLink to={'/register'} className={"NavLinks"}><button className='button2'>Get A Free Trial</button></NavLink> 
         </div>
         <div className="detail-summary">
         <details>
