@@ -8,7 +8,8 @@ const Footer = () => {
         {/* <hr></hr> */}
         <div className="footer_content">
         <div className="footer_intro">
-            <img src="/images/fgc.jpeg" alt="" />
+            {/* <img src="/images/fgc.jpeg" alt="" /> */}
+            <h1>F.G.Campus</h1>
         </div>
         <div className="footer_services">
             <ul>

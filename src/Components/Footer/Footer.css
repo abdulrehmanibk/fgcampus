@@ -24,7 +24,10 @@
     justify-content: center;
 }
 .footer_intro{
-    width: 20rem;
+    /* border: 0.1rem solid white; */
+    color: var(--c3);
+    margin: 1rem;
+    /* width: 20rem; */
 }
 .footer_intro img{
     width: 100%;
@@ -71,17 +74,6 @@
     font-size: 1.2rem;
 }
 
-.footer_intro_logo h4{
-    color: var(--c3);
-    font-family: var(--font1);
-    font-size: 2rem;
-    transform: rotate(1deg);
-}
-.footer_intro_text p{
-    font-size: .8rem;
-    font-family: var(--font1);
-    color: var(--c3);
-}
 .footer_follow_links{
     display: flex;
     flex-direction: row;
@@ -127,7 +119,7 @@ hr{
     }
     .footer_intro{
         width: 90%;
-        height: 25rem;
+        /* height: 25rem; */
     }
     .footer_intro{
         align-self: center;

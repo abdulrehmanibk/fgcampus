@@ -3,6 +3,8 @@ import './Home.css';
 import FeatureCourses from './FeatureCourses';
 import WhyUs from './WhyUs';
 import Marquee from './Marquee';
+import StepsLearning from './StepsLearning';
+import Memorize from './WhyUs';
 
 export const Home = () => {
   return (
@@ -18,9 +20,9 @@ export const Home = () => {
     </div>
       </main>
       <FeatureCourses />
-      <WhyUs />
+      <Memorize />
       <Marquee />
-      {/* <ContactBanner /> */}
+      <StepsLearning />
     </>
   )
 }

@@ -3,10 +3,9 @@ body, html, *{
     padding: 0;
     box-sizing: border-box;
     --c1: #253662;
-    --c2: #25366286;
     --c3: #fff; 
     --c5: #FE6E32; 
-    --c6: gray; 
+    --c6: #F3F4F6; 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -50,7 +49,7 @@ h1{
     font-weight: bold;
 }
 h2{
-    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
     font-weight: bold;
 }
 h3{

@@ -5,7 +5,7 @@ import React from 'react'
 const Marquee = () => {
   return (
     <section className="section">
-    <h2>Diving Deep into Courses</h2>
+    {/* <h3>Diving Deep into Courses</h3> */}
         <div className="wrapper">
             <div className="itemLeft" style={{"--i": 1}}><p>Noorani Qaida</p> </div>
             <div className="itemLeft" style={{"--i": 2}}><p>Tajweed</p> </div>
