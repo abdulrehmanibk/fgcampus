@@ -35,7 +35,10 @@ const StepsLearning = () => {
           </ul> */}
             <button className="button2">Know More</button>
           </>
+          
         }
+        flexDirection="row-reverse"
+
       />
 
       <TwoChild
@@ -59,7 +62,6 @@ const StepsLearning = () => {
             <button className="button2">Know More</button>
           </>
         }
-        flexDirection="row-reverse"
       />
     </>
   );

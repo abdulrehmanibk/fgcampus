@@ -12,23 +12,14 @@ nav{
     top: 0;
     z-index: 111;
 }
-.iconClose{
-    display: none;
-    /* display: flex; */
-    align-items: end;
-    justify-content: flex-end;
-    align-self: flex-end;
-    width: 100%;
-    /* border: 0.1rem solid black; */
-    text-align: end;
-    padding: .5rem;
-}
-.iconOpen{
+
+.resp-nav-icon{
     display: none;
     /* border: 0.1rem solid black; */
     text-align: center;
     padding: .5rem;
     right: 0;
+    line-height: 5px;
 }
 .logo{
     width: 10rem;
@@ -97,9 +88,7 @@ nav{
     transition: 0.2s;
 
 }
-/* .sublinks li:hover{
 
-} */
 .NavLinks{
     color: var(--c1);
     text-decoration: none;
@@ -123,12 +112,13 @@ nav{
     width: 100%;
     position: relative;
     padding: 1rem;
-    display: none;
+    transition: 0.2s;
+    /* opacity: 0; */
+
 }
 .details-sublinks{
     list-style: none;
     /* border: 0.1rem solid wheat; */
-    /* margin-top: .5rem; */
 }
 .details-sublinks li{
     /* border: 0.1rem solid wheat; */
@@ -144,29 +134,18 @@ nav{
 .detail-summary summary{
     list-style:none;
     color: var(--c3);
-    /* margin: .5rem; */
     /* border: 0.1rem solid wheat; */
     
 }
 @media (max-width:900px) {
     nav{
-    justify-content: space-around;
-
+    justify-content: space-between;
+    
     }
-    .navlinks{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        background-color: var(--c3);
+    .navlinks, .btn_nav{
         display: none;
     }
-    .links{
-        flex-direction: column;
-    }
-    .iconClose{
-        display: block;
-    }
-    .iconOpen{
+    .resp-nav-icon{
         display: block;
     }
 

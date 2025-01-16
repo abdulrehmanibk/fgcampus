@@ -3,15 +3,17 @@ body, html, *{
     padding: 0;
     box-sizing: border-box;
     --c1: #253662;
+    --c2: #25366284;
     --c3: #fff; 
     --c5: #FE6E32; 
     --c6: #F3F4F6; 
+    --c7: gray; 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .button1{
     background-color: var(--c1);
-    padding: 1rem 2rem;
+    padding: clamp(.8rem, 2vw, 1rem) clamp(1.7rem, 2vw, 2rem);
     color: var(--c3);
     font-size: 1.1rem;
     transition: 0.2s;
@@ -29,7 +31,7 @@ body, html, *{
 
 .button2{
     background-color: var(--c5);
-    padding: 1rem 2rem;
+    padding: clamp(.8rem, 2vw, 1rem) clamp(1.7rem, 2vw, 2rem);
     color: var(--c3);
     font-size: 1.1rem;
     transition: 0.2s;
@@ -45,7 +47,7 @@ body, html, *{
     border: 0.15rem solid var(--c5);
 }
 h1{
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: bold;
 }
 h2{
@@ -53,59 +55,10 @@ h2{
     font-weight: bold;
 }
 h3{
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.3rem, 2vw, 2rem);
     font-weight: bold;
 }
 p{
     font-size: clamp(.9rem, 5vw, 1.2);
     /* font-weight: bold; */
-}
-.contact {
-    padding: 5rem 2rem;
-    /* background-color: var(--c2); */
-    color: #fff;
-    text-align: center;
-    font-family: var(--font1);
-    text-shadow: .1rem .1rem 1rem black;
-    background: linear-gradient(45deg,var(--c4), var(--c2),var(--c2), var(--c4)); 
-
-  }
-  
-  .contact h2 {
-    font-size: 2rem;
-      color: var(--c3);
-    margin-bottom: 1rem;
-  }
-  
-  .contact p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: var(--c3);
-  
-  }
-  .banner{
-    width: 100%;
-    height: 30rem;
-    background: linear-gradient(45deg, black, var(--c3),var(--c3),  black); 
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.banner h2{
-    /* color: var(--c1); */
-    font-family: var(--font1);
-    font-size: clamp(2rem, 4vw, 5rem);
-    /* text-shadow: .1rem .1rem 1rem white; */
-}
-.banner p{
-    color: var(--c4);
-    font-family: var(--font1);
-    font-size: 1rem;
-}.banner p a{
-   text-decoration: underline;
-   color: #368fa3;
 }

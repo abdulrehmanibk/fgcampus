@@ -1,17 +1,19 @@
 import React from 'react'
 import './Courses.css';
+import Banner from '../../Components/Banner';
+import Stats from '../../Components/Stats/Stats';
+import BarFeatures from '../../Components/BarFeatures/BarFeatures';
 
 
 const CoursesPage = ({selectedProduct}) => {
 
   return (
     <>
-    <div className="banner">
-            <h2>{selectedProduct.title}</h2>
-            {/* <p>
-            <a href="/"> Home</a> {">"} Courses
-          </p> */}
-          </div>
+          <Banner 
+          imgs={'/images/course-bg.jpg'}
+          heading={selectedProduct.title}
+          />
+          
           <header className="course-header">
             <div className="course-header-image">
               <img src="/images/2148705870.jpg" alt="alt"/>
@@ -21,12 +23,13 @@ const CoursesPage = ({selectedProduct}) => {
               <h1>{selectedProduct.title} </h1>
               <p className="subtitle">{selectedProduct.subTitle}</p>
               <p className="aboutP">{selectedProduct.aboutCourse}</p>
+  
+              <BarFeatures 
+              b1={'12 weeks'}
+              b2={'All levels'}
+              b3={'Certificate'}
+              />
 
-              <div className="course-header-p">
-                <p>12 weeks</p>
-                <p>All levels</p>
-                <p>Certificate</p>
-              </div>
             </div>
           </header>
           <div className="course_detail">
@@ -37,24 +40,7 @@ const CoursesPage = ({selectedProduct}) => {
               <li>Guidance from Experienced Qirat Instructors</li>
             </ul>
           </div>
-          <div className="course-stats">
-            <div>
-              <h2>60+</h2>
-              <p>Total Hours</p>
-            </div>
-            <div>
-              <h2>2.4K+</h2>
-              <p>Active Students</p>
-            </div>
-            <div>
-              <h2>94%</h2>
-              <p>Completion Rate</p>
-            </div>
-            <div>
-              <h2>12</h2>
-              <p>Total Modules</p>
-            </div>
-          </div>
+      <Stats />
     </>
   )
 }
