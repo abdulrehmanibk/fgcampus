@@ -1,6 +1,11 @@
 import React from 'react'
 import './Register.css'
 const Register = () => {
+
+  // const sendMessage = () => {
+
+  // };
+
   return (
     <>
     <div className="register_container">
@@ -21,7 +26,8 @@ const Register = () => {
             {/* <input type="text" placeholder="Your Subject" /> */}
           <textarea placeholder="Your Message" rows={'5'} ></textarea>
           <button className="button2"> Get Free Trial </button>
-        </div>
+          <a href="https://api.whatsapp.com/send?phone=+923145443143">Send Message</a>
+          </div>
     </div>
     </>
   )

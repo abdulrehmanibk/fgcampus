@@ -35,9 +35,9 @@ const CoursesPage = ({selectedProduct}) => {
           <div className="course_detail">
             <h3>What You Will Learn</h3>
             <ul>
-              <li>In-Depth Understanding of the Ten Qirat</li>
-              <li>Correct Pronunciation and Recitation Styles</li>
-              <li>Guidance from Experienced Qirat Instructors</li>
+              <li>{selectedProduct.wPoint1}</li>
+              <li>{selectedProduct.wPoint2}</li>
+              <li>{selectedProduct.wPoint3}</li>
             </ul>
           </div>
       <Stats />

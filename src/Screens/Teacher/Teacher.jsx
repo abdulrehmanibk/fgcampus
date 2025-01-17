@@ -1,18 +1,66 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Teacher.css';
 import Banner from '../../Components/Banner'
 import Stats from '../../Components/Stats/Stats'
 import BarFeatures from '../../Components/BarFeatures/BarFeatures';
 import WhyUs from '../../Components/WhyUs/WhyUs';
 import ContactBanner from '../../Components/ContactBanner/ContactBanner';
+import { useParams } from 'react-router-dom';
+import { TeachersData } from './TeachersData';
+import Error from '../../Components/Error/Error';
 
 const Teacher = () => {
+
+  const params = useParams();
+  const [selectedTeacher, setSelectedTeacher] = useState({});
+
+  useEffect(() => {
+    const teacher = TeachersData.find((item) => item.id == params.id);
+
+    setSelectedTeacher(teacher);
+  }, [params.id]);
+
+
+
   return (
+  <>
+  
+    {!selectedTeacher ? (
+      <Error />
+    ) : (
     <>
     <Banner 
-      imgs={'/images/homeback1.jpg'}
-      heading={'Expert Quran Teachers'}
-      para={'Connect with experienced educators dedicated to providing personalized Islamic education in a modern learning environment.'}
+      // imgs={'/images/homeback1.jpg'}
+      heading={
+        <>
+        <i class="fa-solid fa-book-quran" style={{
+          color:'var(--c5)',
+          display:'block',
+          textShadow: '0 0 0 white'
+
+        }}></i>
+        <h1 
+        style={{
+          color:'var(--c1)',
+          display:'block',
+          textShadow: '0 0 0 white'
+        }}
+        >
+        {selectedTeacher.heading}
+
+        </h1>
+        </>
+        
+      }
+      para={
+        <><p style={{fontSize: 'clamp(1.1rem , 3vw, 2rem)',color:'var(--c7)', textShadow: '0 0 0 white'}}>
+          {selectedTeacher.headpara}
+          </p></> 
+      }
+
+      styles={{
+        color:'var(--c1)'
+      }}
 
     />
 
@@ -25,7 +73,8 @@ const Teacher = () => {
       </div>
       <div className="teachers_card_container">
         <div className="teacher_card">
-          <h4>Ustadh Ahmad</h4>
+        <i class="fa-solid fa-graduation-cap"></i>
+          <h4>{selectedTeacher.teacher1}</h4>
           <p>Expert in Tajweed and Tafseer</p>
           <ul>
             <li><i class="fa-solid fa-graduation-cap"></i>Tajweed & Quranic Sciences</li>
@@ -46,7 +95,8 @@ const Teacher = () => {
           />
         </div>        
         <div className="teacher_card">
-          <h4>Ustadh Ahmad</h4>
+        <i class="fa-solid fa-graduation-cap"></i>
+          <h4>{selectedTeacher.teacher2}</h4>
           <p>Expert in Tajweed and Tafseer</p>
           <ul>
             <li><i class="fa-solid fa-graduation-cap"></i>Tajweed & Quranic Sciences</li>
@@ -67,7 +117,8 @@ const Teacher = () => {
           />
         </div>        
         <div className="teacher_card">
-          <h4>Ustadh Ahmad</h4>
+        <i class="fa-solid fa-graduation-cap"></i>
+          <h4>{selectedTeacher.teacher3}</h4>
           <p>Expert in Tajweed and Tafseer</p>
           <ul>
             <li><i class="fa-solid fa-graduation-cap"></i>Tajweed & Quranic Sciences</li>
@@ -94,6 +145,8 @@ const Teacher = () => {
     <ContactBanner />
 
     </>
+  )}
+  </>
   )
 }
 

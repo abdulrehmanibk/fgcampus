@@ -24,7 +24,7 @@
 }
 .teacher_card{
     width: 20rem;
-    height: 20rem;
+    height: 25rem;
     /* border: 0.1rem solid black; */
     display: flex;
     flex-direction: column;
@@ -32,6 +32,11 @@
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: .1rem .1rem 1rem var(--c7);
+}
+.teacher_card >i {
+    align-self: center;
+    color: var(--c1);
+    font-size: 4rem;
 }
 .teacher_card ul {
     list-style: none;
