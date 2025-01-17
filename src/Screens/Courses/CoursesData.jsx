@@ -2,7 +2,7 @@ export const CourseData = [{
     id:1,
     title:'Noorani Qaida Online',
     subTitle: 'Master The Foundation of Quranic Recitation',
-    image: '',
+    image: '/images/qot-learn-noorani-qaidah.webp',
     aboutCourse:'In this course, you will learn the essential rules and techniques of Noorani Qaida, a fundamental tool for correct Quranic recitation',
     wPoint1:'Comprehensive Lessons on Quranic Pronunciation',
     wPoint2:'Step-by-Step Guide to Learning Noorani Qaida',

@@ -24,11 +24,11 @@
 
 
 .cards{
-    width: 80%;
+    width: 90%;
     /* border: 0.1rem solid black; */
     /* position: relative; */
     display: flex;
-    gap: 1rem;
+    /* column-gap: .5rem; */
 }
 .slider_container{
     width: 100%;
@@ -59,32 +59,33 @@
     border: none;
     background-color: var(--c5);
     box-shadow: 0.1rem 0.1rem 1rem gray;
+    color: var(--c3);
 }
 .card{
-    min-width: 25rem;
+    min-width: 100%;
     /* height: 25rem; */
     /* border: 0.1rem solid black; */
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    background-color: var(--c5);
+    background-color: var(--c1);
     text-align: center;
     /* row-gap: 1rem; */
     align-items: center;
     transition: .3s;
     box-shadow: .1rem .1rem 1rem gray;
-    margin: .5rem;
+    /* margin: .5rem; */
 
 }
 
 .card p{
     color: var(--c3);
-    padding: 1rem;
+    padding:  0 1rem;
     text-shadow: .1rem .1rem .5rem var(--c1);
     font-weight: bold;
     letter-spacing: 1px;
-
+    font-size: 2rem;
 
 }
 /* .card:hover{
@@ -103,8 +104,8 @@
 }
 @media (max-width:767px) {
     .card{
-        min-width: 90%;
-        /* border-radius: 2rem; */
+        min-width: 100%;
+        border-radius: 2rem;
     }
 }
 .hr {

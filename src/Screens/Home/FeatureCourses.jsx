@@ -12,13 +12,7 @@ const FeatureCourses = () => {
         let rounded;
         let a = containerRef.current.offsetWidth;
         let b = a/25 + CourseData.length;
-        let c = b/16;
-            
-        // rounded = Math.round(c); 
-        setWidth(c);
-        // console.log("containerRef.current.offsetWidth ", containerRef.current.offsetWidth);
-        // console.log("c ", c);
-        
+        let c = b/16;        
       }
     }, []);
     const decimalStr = width.toString().split('.')[1];
@@ -27,14 +21,14 @@ const FeatureCourses = () => {
 
       const nextSlide = () => {
             setCurrentIndex((prevIndex) =>
-                prevIndex >= CourseData.length - width ? 0 : prevIndex +  1
+                prevIndex === CourseData.length - 1 ? 0 : prevIndex +  1
             );        
       };
     
       const prevSlide = () => {
 
             setCurrentIndex((prevIndex) =>
-                prevIndex === 0 ? CourseData.length - width  : 0
+                prevIndex === 0 ? CourseData.length -1 : prevIndex -  1
               );
       };
 
@@ -59,7 +53,7 @@ const FeatureCourses = () => {
 
             <div className="slider"
             style={{
-                transform: `translateX(-${currentIndex * 25}rem)`,
+                transform: `translateX(-${currentIndex * 100}%)`,
                 transition: 'transform 0.5s ease-in-out',
             }}
             >
@@ -69,7 +63,7 @@ const FeatureCourses = () => {
             className={`card`}
           >
             <div className="card_img">
-              <img src={card.img} alt="" />
+              <img src={card.image} alt="" />
             </div>
             <p>{card.title}</p>
             <button className="button1">Read More</button>
