@@ -16,7 +16,7 @@ const CoursesPage = ({selectedProduct}) => {
           
           <header className="course-header">
             <div className="course-header-image">
-              <img src="/images/2148705870.jpg" alt="alt"/>
+              <img src={selectedProduct.image} alt="alt"/>
             </div>
 
             <div className="course-header-content">

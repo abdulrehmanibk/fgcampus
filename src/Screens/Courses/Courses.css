@@ -18,7 +18,6 @@
 .aboutP{
     margin: 1rem 0;
     color: grey;
-    /* text-shadow: .1rem .1rem 1rem grey; */
     font-weight: bold;
 
 
@@ -31,6 +30,9 @@
   .course-header-image img{
     width: 100%;
     height: auto;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+
   }
 .course-header-content{
     width: 35rem;
@@ -49,7 +51,6 @@
 
 
 .course_detail{
-    /* width: 30rem ; */
     /* border: 0.1rem solid black; */
     margin: 2rem;
     gap: .2rem;
