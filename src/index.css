@@ -3,7 +3,7 @@ body, html, *{
     padding: 0;
     box-sizing: border-box;
     --c1: #253662;
-    --c2: #25366284;
+    --c2: #4f6fbf;
     --c3: #fff; 
     --c5: #FE6E32; 
     --c6: #F3F4F6; 
@@ -27,6 +27,23 @@ body, html, *{
     background-color: var(--c3);
     color: var(--c1); 
     border: 0.15rem solid var(--c1);   
+}
+.button3{
+    background-color: var(--c1);
+    padding: clamp(.8rem, 2vw, 1rem) clamp(1.7rem, 2vw, 2rem);
+    color: var(--c3);
+    font-size: 1.1rem;
+    transition: 0.2s;
+    border-radius: 5rem;
+    outline: none;
+    border: 0.15rem solid var(--c3);
+    margin: .5rem;
+    cursor: pointer;
+}
+.button3:hover{
+    background-color: var(--c5);
+    color: var(--c3); 
+    border: 0.15rem solid var(--c3);   
 }
 
 .button2{

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './FeatureCourses.css';
 import {CourseData} from '../Courses/CoursesData'
+import { Link } from 'react-router-dom';
 
 const FeatureCourses = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,7 +67,7 @@ const FeatureCourses = () => {
               <img src={card.image} alt="" />
             </div>
             <p>{card.title}</p>
-            <button className="button1">Read More</button>
+            <Link className="button3" to={`/courses/${card.id}`}>Read More</Link>
           </div>
         ))}
         </div>

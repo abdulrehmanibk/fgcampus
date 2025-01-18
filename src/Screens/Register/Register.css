@@ -5,11 +5,12 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 1.2rem;
-    background-image: url(../../../public/images/regback.jpg);
+    padding: 4rem 1rem;
+    /* background-image: url(../../../public/images/regback.webp); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: var(--c6);
 }
 .register_form{
     width: 30rem;
@@ -20,9 +21,9 @@
     gap: 1rem;
     text-align: center;
     padding: 2rem;
-    background-color: transparent;
+    background-color: var(--c1);
     backdrop-filter: blur(10px);
-    border-radius: .5rem;
+    border-radius: 2rem;
     color: var(--c3);
     box-shadow: .1rem .1rem 1.5rem var(--c6);
 }

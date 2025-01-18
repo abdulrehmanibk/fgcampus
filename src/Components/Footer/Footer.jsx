@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Footer.css';
+import { CourseData } from '../../Screens/Courses/CoursesData';
+import { NavLink } from 'react-router-dom';
+import { NavIconContext } from '../../Context/NavIcon';
+import features from '../../Screens/AdditionalLinks/additionalLinksData';
 
 const Footer = () => {
+    const {handleNav} = useContext(NavIconContext)
   return (
     <>
         <footer className="footer">
@@ -14,16 +19,9 @@ const Footer = () => {
         <div className="footer_services">
             <ul>
                 <li>Regular Courses</li>
-                <li>Noorani Qaida</li>
-                <li>Quran with Tajweed</li> 
-                <li>Quran Memorization</li>
-                <li>Tafseer e Quran</li> 
-                <li>Arabic Language</li>
-                <li>Islamic Studies</li>
-                <li>Taleem ul Islam</li>
-                <li>Quran Translation</li>
-                <li>Online Ijazah Course</li>
-                <li>Learn Ten Qirat Online</li>
+                {CourseData.map((item, index) => (
+                <li key={index}><NavLink to={`/courses/${item.id}`} style={{textDecoration:'none', color:'var(--c3)'}}>{item.title}</NavLink></li>
+                ))}
             </ul>
         </div>
         <div className="footer_services">
@@ -45,16 +43,13 @@ const Footer = () => {
         <div className="footer_services">
             <ul>
                 <li>Short Courses</li>
-                    <li>Memorization of Selected Surahs</li>
-                    <li> Daily Supplication Online</li>
-                    <li>Pillars of Islam</li>
-                    <li>Fiqh (Islamic Jurisprudence)</li>
-                    <li>Seerah (Life of Muhammad)</li>
-                    <li>Islamic beliefs aqeedah</li>
-                    <li>History of Islam</li>
-                    <li>Ramadan Special Courses</li>
-                    <li>The Companions of Muhammad</li>
-                    <li>Stories of the Prophets</li>
+                {features.map((item, index) => (
+                    <li key={index}>
+                        <NavLink to={`/additionallinks/${item.id}`} style={{textDecoration:'none', color:'var(--c3)'}}>
+                        {item.heading}
+                        </NavLink>
+                    </li>
+                ))}
             </ul>
         </div>
         </div>

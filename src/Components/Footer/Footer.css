@@ -20,7 +20,7 @@
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 .footer_intro{
@@ -46,7 +46,7 @@
     text-align: left;
     height: 100%;
 }
-.footer_contact, .footer_services{
+.footer_services{
     /* width: 25; */
     /* border: 0.1rem solid white; */
     justify-content: flex-start;

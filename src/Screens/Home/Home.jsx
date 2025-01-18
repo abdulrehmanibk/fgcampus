@@ -71,7 +71,7 @@ export const Home = () => {
   return (
     <>
       <Banner 
-            imgs={'/images/homeback1.jpg'}
+            imgs={'/images/homeback1.webp'}
             heading={'We Focus on Your Children’s Development'}
             para={'In addition to these core schools, students in a given country may also attend schools before and after primary elementary in the and secondary middle school in the us education. Kindergarten or preschool.'}
             children={
@@ -80,6 +80,7 @@ export const Home = () => {
               </div>
             }
       />
+      
       <FeatureCourses />
       <Memorize />
       {/* <Marquee /> */}

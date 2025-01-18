@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css';
 import { Link, NavLink } from 'react-router-dom';
 
 import {CourseData} from '../../Screens/Courses/CoursesData';
+import { NavIconContext } from '../../Context/NavIcon';
 
 const Navbar = () => {
+    const {isResponsiveNav, handleNav} = useContext(NavIconContext)
 
-    const [isResponsiveNav, setIsResponsiveNav] = useState(false);
-    const handleResponsiveNav = () => {
-        setIsResponsiveNav(!isResponsiveNav)
-        
-    };  
 
   return (
     <>
@@ -19,11 +16,13 @@ const Navbar = () => {
         <div className="navlinks">
           <ul className="links">
             <li className="link">
-              <NavLink to={"/"} className={"NavLinks"}>
+          <i class="fa-solid fa-house"></i>
+              <NavLink to={"/"} className={"NavLinks"} >
                 Home
               </NavLink>
             </li>
             <li className="link">
+            <i class="fa-solid fa-user"></i>
               Teachers
               <ul className="sublinks">
                 <li>
@@ -41,12 +40,14 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="link">
+            <i class="fa-solid fa-building"></i>
               <NavLink to={"/about/fgcampus"} className={"NavLinks"}>
                 About
               </NavLink>
             </li>
 
             <li className="link">
+            <i class="fa-solid fa-book-open"></i>
               Courses
               <ul className="sublinks">
               {CourseData.map((item, index) => (                
@@ -60,11 +61,13 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="link">
+            <i class="fa-regular fa-circle-user"></i>
               <NavLink to={"/register"} className={"NavLinks"}>
                 Register Now
               </NavLink>
             </li>
             <li className="link">
+            <i class="fa-solid fa-credit-card"></i>
             <NavLink to={'/pricing'} className={"NavLinks"}>Pricing</NavLink>
             </li>
           </ul>
@@ -77,7 +80,7 @@ const Navbar = () => {
         </div>
 
         <div className="resp-nav-icon">
-          <p onClick={handleResponsiveNav}>
+          <p onClick={handleNav}>
             {!isResponsiveNav ? <i class="fa-solid fa-bars"></i> : <i class="fa-solid fa-xmark"></i>}
           </p>
         </div>
@@ -85,14 +88,15 @@ const Navbar = () => {
         <div
           className="detail-summary"
           style={{ 
+            opacity: isResponsiveNav ? "1" : "0",
             display: isResponsiveNav ? "block" : "none",
-            transform: isResponsiveNav ? "translateY(0%)" : "translateY(-10%)",
-            transition: "0.3s", 
+            transform: isResponsiveNav ? "translateY(0%)" : "translateY(10%)",
+            transition:'transform 0.5s ease-in-out',
              }}
         >
           <details>
             <summary>
-              <NavLink to={"/"} className={"NavLinks"}>
+              <NavLink to={"/"} className={"NavLinks"} onClick={handleNav}>
                 Home
               </NavLink>
             </summary>
@@ -100,17 +104,17 @@ const Navbar = () => {
           <details>
             <summary>Teachers</summary>
             <ul className="details-sublinks">
-              <NavLink to="/teachers/1" className={"NavLinks"}>
+              <NavLink to="/teachers/1" className={"NavLinks"} onClick={handleNav}>
                 <li> Male Teachers </li>
               </NavLink>
-              <Link to="/teachers/2" className={"NavLinks"}>
+              <Link to="/teachers/2" className={"NavLinks"} onClick={handleNav}>
                 <li> Female Teachers </li>
               </Link>
             </ul>
             </details>
           <details>
             <summary>              
-              <NavLink to={"/about/fgcampus"} className={"NavLinks"}>
+              <NavLink to={"/about/fgcampus"} className={"NavLinks"} onClick={handleNav}>
                 About
               </NavLink></summary>
           </details>
@@ -118,7 +122,7 @@ const Navbar = () => {
             <summary>Courses</summary>
             <ul className="details-sublinks">
               {CourseData.map((item, index) => (                
-              <NavLink to={`/courses/${item.id}`} className={"NavLinks"} key={index}>
+              <NavLink to={`/courses/${item.id}`} className={"NavLinks"} key={index} onClick={handleNav}>
                 <li >
                     {item.title}
                 </li>
@@ -128,12 +132,12 @@ const Navbar = () => {
           </details>
           <details>
             <summary>
-              <NavLink to={'/pricing'} className={"NavLinks"}>Pricing</NavLink>
+              <NavLink to={'/pricing'} className={"NavLinks"} onClick={handleNav}>Pricing</NavLink>
             </summary>
           </details>
           <details>
             <summary>
-              <NavLink to={"/register"} className={"NavLinks"}>
+              <NavLink to={"/register"} className={"NavLinks"} onClick={handleNav}>
                 Register Now
               </NavLink>
             </summary>

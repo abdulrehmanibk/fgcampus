@@ -11,11 +11,12 @@ nav{
     position: sticky;
     top: 0;
     z-index: 111;
+    /* border: 0.1rem solid black; */
+    /* line-height: 6rem; */
 }
 
 .resp-nav-icon{
     display: none;
-    /* border: 0.1rem solid black; */
     text-align: center;
     padding: .5rem;
     right: 0;
@@ -49,8 +50,10 @@ nav{
     align-items: center;
     justify-content: center;
     display: flex;
+    column-gap: .3rem;
 }
 .link:hover{
+    color: var(--c2);
     .sublinks{
         display: block;
         transform: translateY(0%);
@@ -63,7 +66,14 @@ nav{
     align-items: center;
     justify-content: center;
     padding: .3rem;
+    /* line-height: 1; */
+
     }
+    .NavLinks{
+    color: var(--c2);
+
+    }
+    
 }
 .sublinks{
     display: flex;
@@ -111,15 +121,16 @@ nav{
 }
 
 .detail-summary{
-    height: 100vh;
+    height: 50vh;
     list-style: none;
     background-color: var(--c1);
     width: 100%;
     position: relative;
     padding: 1rem;
-    transition: 0.2s;
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; 
+    overflow-x: hidden;
+    overflow: scroll;
+    display: none;
 }
 .details-sublinks{
     list-style: none;

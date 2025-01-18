@@ -10,16 +10,22 @@ import Register from './Screens/Register/Register';
 import Teacher from './Screens/Teacher/Teacher';
 import About from './Screens/About/About';
 import Pricing from './Screens/Pricing/Pricing';
+import ScrollToTop from './Components/TopScroll';
+import { NavIconProvider } from './Context/NavIcon';
+import AdditionalLinks from './Screens/AdditionalLinks/AdditionalLinks';
 
 function App() {
   return (
     <>
+    <NavIconProvider>
     <BrowserRouter>
+    <ScrollToTop />
     <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses/:id" element={<Courses />} />
         <Route path="/teachers/:id" element={<Teacher />} />
+        <Route path="/additionallinks/:id" element={<AdditionalLinks />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about/fgcampus" element={<About />} />
         <Route path="/pricing" element={<Pricing />} />
@@ -27,6 +33,7 @@ function App() {
       </Routes>
       <Footer />
     </BrowserRouter>
+    </NavIconProvider>
     </>
   )
 }

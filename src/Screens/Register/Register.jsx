@@ -26,7 +26,7 @@ const Register = () => {
             {/* <input type="text" placeholder="Your Subject" /> */}
           <textarea placeholder="Your Message" rows={'5'} ></textarea>
           <button className="button2"> Get Free Trial </button>
-          <a href="https://api.whatsapp.com/send?phone=+923145443143">Send Message</a>
+          {/* <a href="https://api.whatsapp.com/send?phone=+923145443143">Send Message</a> */}
           </div>
     </div>
     </>
