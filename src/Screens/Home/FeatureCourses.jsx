@@ -4,6 +4,10 @@ import {CourseData} from '../Courses/CoursesData'
 import { Link } from 'react-router-dom';
 
 const FeatureCourses = () => {
+    // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    // const [k, setK] = useState(2);
+
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const containerRef = useRef(null);
     const [width, setWidth] = useState(0);

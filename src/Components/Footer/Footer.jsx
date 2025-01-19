@@ -1,12 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './Footer.css';
 import { CourseData } from '../../Screens/Courses/CoursesData';
 import { NavLink } from 'react-router-dom';
-import { NavIconContext } from '../../Context/NavIcon';
 import features from '../../Screens/AdditionalLinks/additionalLinksData';
 
 const Footer = () => {
-    const {handleNav} = useContext(NavIconContext)
+
   return (
     <>
         <footer className="footer">

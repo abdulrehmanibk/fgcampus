@@ -54,7 +54,8 @@ const AdditionalLinks = () => {
                     <p style={{
                     fontFamily:'monospace',
                     letterSpacing:'.0000001px',
-                    color:'gray'
+                    color:'gray',
+                    textAlign:'left', 
                     }}>{additionalLinkFeature[descriptionKey]}</p>
                 </li>
             )
