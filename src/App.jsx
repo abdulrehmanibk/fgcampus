@@ -22,13 +22,13 @@ function App() {
     <ScrollToTop />
     <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} />
         <Route path="/courses/:id" element={<Courses />} />
         <Route path="/teachers/:id" element={<Teacher />} />
         <Route path="/additionallinks/:id" element={<AdditionalLinks />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about/fgcampus" element={<About />} />
-        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/pricing" element={<Pricing />} /> */}
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
